@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: frontend-deploy
+    labels:
+        name: frontend-deploy
+        app: webapp
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            name: frontend-pod
+            app: webapp
+    template:
+        metadata:
+            name: frontend-pod
+            labels:
+                name: frontend-pod
+                app: webapp
+        spec:
+            containers:
+                - name: webapp
+                  image: muzlee/webapp-frontend:1.1.0
+                  ports:
+                      - containerPort: 80
