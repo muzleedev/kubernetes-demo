@@ -23,7 +23,7 @@ spec:
           image: muzlee/webapp-frontend:1.0.0
           ports:
             - containerPort: 80
-          resources:
-            limits:
-              memory: "128Mi"
-              cpu: "500m"
+          # resources:
+          #   limits:
+          #     memory: "128Mi"
+          #     cpu: "500m"
