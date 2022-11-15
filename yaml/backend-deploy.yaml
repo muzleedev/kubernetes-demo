@@ -27,6 +27,13 @@ spec:
                 name: backend-configmap
             - secretRef:
                 name: backend-secret
+          env:
+            - name: SECRET_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: backend-secret
+                  key: password
+                  optional: false
           ports:
             - containerPort: 3000
           # resources:
