@@ -21,7 +21,7 @@ spec:
       serviceAccountName: "backend-service-account"
       containers:
         - name: webapp
-          image: muzlee/webapp-backend:1.1.0
+          image: muzlee/webapp-backend:1.0.0
           envFrom:
             - configMapRef:
                 name: backend-configmap

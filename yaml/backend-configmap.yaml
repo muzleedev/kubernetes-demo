@@ -6,3 +6,4 @@ data:
   PORT: "3000"
   REDIS_URL: "redisdb"
   REDIS_PORT: "6379"
+immutable: true

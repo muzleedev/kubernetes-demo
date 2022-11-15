@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: webapp
-          image: muzlee/webapp-frontend:1.1.0
+          image: muzlee/webapp-frontend:1.0.0
           ports:
             - containerPort: 80
           resources:
