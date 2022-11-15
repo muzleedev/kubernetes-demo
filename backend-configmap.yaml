@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-configmap
+data:
+  PORT: "3000"
+  REDIS_URL: "redisdb"
+  REDIS_PORT: "6379"

@@ -1,0 +1,8 @@
+how to pull latest image with the same name:tag
+why don't we need ports when connecting backend services
+Helm secretes - https://itnext.io/helm-3-secrets-management-4f23041f05c3
+
+TODO
+add config map for env vars
+add security for password
+use helm

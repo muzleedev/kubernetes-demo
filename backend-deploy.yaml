@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deploy
+  labels:
+    name: backend-deploy
+    app: webapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: backend-pod
+      app: webapp
+  template:
+    metadata:
+      name: backend-pod
+      labels:
+        name: backend-pod
+        app: webapp
+    spec:
+      serviceAccountName: "backend-service-account"
+      containers:
+        - name: webapp
+          image: muzlee/webapp-backend:1.1.0
+          envFrom:
+            - configMapRef:
+                name: backend-configmap
+            - secretRef:
+                name: backend-secret
+          ports:
+            - containerPort: 3000
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
